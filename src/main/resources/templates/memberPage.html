@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Our members</title>
+  </head>
+  <body>
+    <header><h1>Members</h1></header>
+
+    <div>
+      <ul class="members">
+        <li id="member" th:each="member : ${memberList}">
+            <span th:text="${member.age} + ' years old'"></span> <br>
+            <span th:text="${member.clubRole}"></span><br>
+            <span style="font-weight: bolder;" th:text="'Currently drives a: ' + ${member.currentlyDrives}"></span> <br>
+            <span th:text="${member.paidMember} ? ${member.name} + ' is currently a paid member.' : ${member.name} + ' is not a paid member in the club.'" ></span>
+        </li>
+        <br />
+      </ul>
+    </div>
+  </body>
+</html>

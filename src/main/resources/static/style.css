@@ -1,0 +1,23 @@
+
+body{
+    background-image: url("Deep-BG.jfif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+header{
+    text-align: center;
+}
+.members {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    text-align: center;
+    list-style: none;
+    font-size: x-large;
+    font-weight: bolder;
+}
+#member{
+    background-color: lightgray;
+}
