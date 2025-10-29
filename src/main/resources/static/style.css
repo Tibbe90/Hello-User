@@ -21,3 +21,15 @@ header{
 #member{
     background-color: lightgray;
 }
+.homeButton {
+    position: absolute; 
+    bottom: 2rem;
+    font-size:xx-large;
+}
+#inputForm {
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(1,2fr);
+    padding-left: 35%;
+    padding-right: 35%;
+}

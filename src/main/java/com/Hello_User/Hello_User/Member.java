@@ -1,26 +1,33 @@
 package com.Hello_User.Hello_User;
 
+import java.util.UUID;
+
 public class Member {
 
+    private UUID id;
     private String name;
-    private String age;
-    private String clubRole;
+    private int age;
+    private String clubRole = "new member";
     private String currentlyDrives;
     private Boolean paidMember;
+    
+        public Member(String name, int age, String clubRole, String currentlyDrives, Boolean paidMember) {
+            this.id = UUID.randomUUID();
+            this.name = name;
+            this.age = age;
+            this.currentlyDrives = currentlyDrives;
+            this.paidMember = paidMember;
+        }
+
+    public UUID getId() {
+            return id;
+        }
 
     public Boolean getPaidMember() {
         return paidMember;
     }
 
     public void setPaidMember(Boolean paidMember) {
-        this.paidMember = paidMember;
-    }
-
-    public Member(String name, String age, String clubRole, String currentlyDrives, Boolean paidMember) {
-        this.name = name;
-        this.age = age;
-        this.clubRole = clubRole;
-        this.currentlyDrives = currentlyDrives;
         this.paidMember = paidMember;
     }
 
@@ -32,11 +39,11 @@ public class Member {
         this.name = name;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

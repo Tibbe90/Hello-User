@@ -8,6 +8,29 @@
 </head>
 <body>
     <header><h1>If you like old Hondas, we would really like to see you in our club</h1><br>
-    <h1>Add your information below</h1></header>
+
+
+        
+        <div>
+            <h1>Add your information below</h1></header>
+            <form id="inputForm" method="post" th:action="@{/Add-member}" th:object="${newMember}">
+                <h4>Enter your name:</h4>
+                <input type="text" th:field="*{name}" required>
+                <h4>How old are you?</h4>
+                <div th:if="${ageIncorrect}"> <p> We currently only accept members between 16-105 years old, contact one of the paid members if you still want to apply</p></div>
+                <input type="number" th:field="*{age}" required>
+                <input type="hidden" th:field="*{clubRole}">
+                <h4>What car do you drive?</h4>
+                <input type="text" th:field="*{currentlyDrives}" required>
+                <h4>Have you paid the members fee? 
+                <input type="checkbox" th:checked="${paidMember}"></h4>
+                <button type="submit">Apply</button>
+                </span>
+            </form>
+        </div>
+
+    <div><footer class="homeButton">
+      <a th:href="@{/main}">Home</a>
+    </footer></div>
 </body>
 </html>
