@@ -11,14 +11,20 @@
 
     <div>
       <ul class="members">
-        <li id="member" th:each="member : ${memberList}">
+        <li id="member" th:id="${member.id}" th:each="member : ${memberList}">
+            <span th:text="${member.name}"></span> <br>
             <span th:text="${member.age} + ' years old'"></span> <br>
             <span th:text="${member.clubRole}"></span><br>
             <span style="font-weight: bolder;" th:text="'Currently drives a: ' + ${member.currentlyDrives}"></span> <br>
-            <span th:text="${member.paidMember} ? ${member.name} + ' is currently a paid member.' : ${member.name} + ' is not a paid member in the club.'" ></span>
+            <span th:text="${member.paidMember} ? ${member.name} + ' is currently a paid member.' : ${member.name} + ' is not a paid member in the club.'" ></span> <br>
+            <a th:href="@{/remove-member/{memberId}(memberId=${member.id})}">Remove member</a>
         </li>
         <br />
       </ul>
     </div>
+    
+    <div><footer class="homeButton">
+      <a th:href="@{/main}">Home</a>
+    </footer></div>
   </body>
 </html>
