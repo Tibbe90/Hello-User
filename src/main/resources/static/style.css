@@ -1,51 +1,74 @@
-
-body{
-    background-image: url("Deep-BG.jfif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
+body {
+  background-image: url("Deep-BG.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  color: #222;
 }
-header{
-    text-align: center;
-    padding-left: 20%;
+header {
+  text-align: center;
+  padding-left: 6%;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+footer {
+  padding-top: 1rem;
 }
 .members {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
-    text-align: center;
-    list-style: none;
-    font-size: x-large;
-    font-weight: bolder;
-}
-#member{
-    background-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+  list-style: none;
+  font-size: x-large;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .homeButton {
-    position: absolute; 
-    bottom: 2rem;
-    font-size:xx-large;
+  position: absolute;
+  bottom: 2rem;
+  font-size: xx-large;
 }
 #inputForm {
-    text-align: center;
-    display:grid;
-    grid-template-columns: repeat(1,2fr);
-    padding-left: 35%;
-    padding-right: 35%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  padding-left: 35%;
+  padding-right: 35%;
 }
 .bottom {
-    list-style-type:none;
-    position:absolute; bottom: 2rem;
-    padding-left: 2rem;
+  list-style-type: none;
+  margin-top: auto;
+  bottom: 2rem;
+  padding-left: 2rem;
 }
-.homePageLinks{
-    text-align: center;
+.homePageLinks {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: lightcoral;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 .homePageText {
-      border-radius:10px;
-      padding:1rem;
-      margin-bottom:1.25rem;
-      padding-left: 35%;
-      padding-right: 35%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-left: 0.2rem solid red;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  text-align: center;
 }

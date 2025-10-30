@@ -7,7 +7,7 @@ public class Member {
     private UUID id;
     private String name;
     private int age;
-    private String clubRole = "new member";
+    private String clubRole;
     private String currentlyDrives;
     private Boolean paidMember;
     
@@ -15,6 +15,7 @@ public class Member {
             this.id = UUID.randomUUID();
             this.name = name;
             this.age = age;
+            this.clubRole = clubRole;
             this.currentlyDrives = currentlyDrives;
             this.paidMember = paidMember;
         }

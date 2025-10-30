@@ -7,30 +7,25 @@
     <title>Want to become a member?</title>
 </head>
 <body>
-    <header><h1>If you like old Hondas, we would really like to see you in our club</h1><br>
-
-
-        
-        <div>
-            <h1>Add your information below</h1></header>
-            <form id="inputForm" method="post" th:action="@{/Add-member}" th:object="${newMember}">
-                <h4>Enter your name:</h4>
-                <input type="text" th:field="*{name}" required>
-                <h4>How old are you?</h4>
-                <div th:if="${ageIncorrect}"> <p> We currently only accept members between 16-105 years old, contact one of the paid members if you still want to apply</p></div>
-                <input type="number" th:field="*{age}" required>
-                <input type="hidden" th:field="*{clubRole}">
-                <h4>What car do you drive?</h4>
-                <input type="text" th:field="*{currentlyDrives}" required>
-                <h4>Have you paid the members fee? 
-                <input type="checkbox" th:checked="${paidMember}"></h4>
-                <button type="submit">Apply</button>
-                </span>
-            </form>
-        </div>
-
-    <div><footer class="homeButton">
+    <div>
+       <header><h1>Add their information below</h1></header>
+        <form id="inputForm" method="post" th:action="@{/Add-member}" th:object="${newMember}">
+            <h4>Enter their name:</h4>
+            <input type="text" th:field="*{name}" placeholder="Full name" required>
+            <h4>How old are they?</h4>
+            <div th:if="${ageIncorrect}"> <p> We currently only accept members between 16-105 years old. Perhaps we can come to an agreement with their parents.</p></div>
+            <input type="number" th:field="*{age}" required>
+            <h4>What is their current status in the club?</h4>
+            <input type="text" th:field="*{clubRole}" placeholder="New member" required>
+            <h4>What car do they drive?</h4>
+            <input type="text" th:field="*{currentlyDrives}" placeholder="Any car will do, but we really like Hondas" required>
+            <h4>Have they paid the members fee? 
+            <input type="checkbox" th:checked="${paidMember}"></h4>
+            <button type="submit">Apply</button>
+        </form>
+    </div>
+    <footer class="homeButton">
       <a th:href="@{/home}">Home</a>
-    </footer></div>
+    </footer>
 </body>
 </html>

@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>Honda Car club</title>
 </head>
 <body>
     <header><h1>Welcome to the swedish Honda vintage car club</h1>
+    <h1>If you like old Hondas, we would really like to see you in our club</h1><br>
 </header>
+<main>
         <p class="homePageText">
       Welcome! If you love classic Hondas — from early Civics and CRXs to other vintage models — you're among friends.
       We share restoration tips, host meetups, and help each other keep these cars on the road and in great shape.
@@ -18,25 +21,30 @@
       <p class="homePageText">
         Our mission is to celebrate the legacy of classic Honda vehicles by connecting passionate owners and enthusiasts.
         We aim to preserve, restore, and enjoy older Hondas through shared knowledge, community events, and mutual support —
-        keeping the history and spirit of Honda alive for generations to come.
+        keeping the history and spirit of Honda alive for future generations.
       </p>
     </section>
         <p class="homePageLinks">
             <a th:href="@{member-Page}">Who we are</a><br>
-            <a th:href="@{new-Member-Page}">Become a member</a>
+            <div class="homePageLinks" th:if="${admin == currentUser}">
+                <a th:href="@{new-Member-Page}">Add a new member</a>
+            </div>
         </p>
-    </div>
     <footer class="bottom" >
-        <div id="loginField">
-            <ul style="list-style-type: none;">
-                <button id="loginBtn">Login</button>
-                <li id="userInput"></li>
-                <li id="passwordInput"></li>
-                <input type="submit" id="submitBtn"> <br>
-                <input type="hidden" id="userId" th:id=${userId}>
-            </ul>
-        </div>
-        <br><button id="logoutBtn">Logout</button>
+        <button id="loginBtn">Admin</button>
+            <form method="post" th:action="@{/Get-Id}">
+                <div id="loginField">
+                <ul style="list-style-type: none;">
+                    <li id="userInput"></li>
+                    <li id="passwordInput"></li>
+                    <input type="submit" id="submitBtn">
+                    <input type="hidden" id="userId" name="userId" value="">
+                </ul>
+            </div><p>
+                    <button id="logoutBtn">Logout</button>
+            </p>
+        </form>
     </footer>
+    </main>
 </body>
 </html>
