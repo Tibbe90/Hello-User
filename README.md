@@ -35,7 +35,7 @@ The site has **three pages**:
   - Age
   - Club Role
   - What car they drive  
-  - If you have a paid membership 
+  - If they have a paid membership 
 - When all forms are correctly filled out, the member will be added to the list.
 - The input requires all fields to be filled out and that the member is at least 16 years old.
 
