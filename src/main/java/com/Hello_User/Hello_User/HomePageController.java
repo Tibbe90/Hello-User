@@ -5,13 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class MainPageController {
+public class HomePageController {
 
 
-    @GetMapping("/main") 
+    @GetMapping("/home") 
     public String getHomePage(Model model){
         model.addAttribute("Startup", model);
-        return "mainPage";
+        return "homePage";
     } 
     
 }
