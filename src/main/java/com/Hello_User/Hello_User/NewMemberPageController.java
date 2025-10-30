@@ -19,7 +19,7 @@ public String getMemberPage(Model model) {
 }
 @PostMapping("/Add-member")
 public String postNewMember(Member member) {
-    if (member.getAge() > 16 && member.getAge() < 105) {
+    if (member.getAge() >= 16 && member.getAge() <= 105) {
         MemberPageController.memberList.add(member);
         this.ageIncorrect = false;
     }
