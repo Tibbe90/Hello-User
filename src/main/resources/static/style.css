@@ -8,6 +8,7 @@ body{
 }
 header{
     text-align: center;
+    padding-left: 20%;
 }
 .members {
     display: grid;
@@ -32,4 +33,19 @@ header{
     grid-template-columns: repeat(1,2fr);
     padding-left: 35%;
     padding-right: 35%;
+}
+.bottom {
+    list-style-type:none;
+    position:absolute; bottom: 2rem;
+    padding-left: 2rem;
+}
+.homePageLinks{
+    text-align: center;
+}
+.homePageText {
+      border-radius:10px;
+      padding:1rem;
+      margin-bottom:1.25rem;
+      padding-left: 35%;
+      padding-right: 35%;
 }
