@@ -63,5 +63,12 @@ The site has **three pages**:
     - http://localhost:8080/home
 ---
 
-🧑‍💻 Author: Jonas Tibbelin
+## 🧑‍💻 Author: Jonas Tibbelin
 - Created for a school assignment project with Spring Boot & Thymeleaf.
+## **My Thoughts**
+- This was quite difficult for me at this time, I did have to make use of most (if not all) that I've learned so far.
+- I did quite quickly set up the member class and the 3 pages, Displaying the different members with thymeleaf and communicating the user Id's between frontend and backend
+  was probably the most difficult parts of the project. When the communication worked, implementing the admin restrictions to different functions was quite easy.
+- The design wasn't a big focus but I still ended up spending quite a bit of time on it in the end. I'm learning but I haven't quite perfected my placement of different sections on the screen.
+  The login injected by the javascript could look a lot better IMO.
+
