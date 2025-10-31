@@ -64,7 +64,6 @@ The site has **three pages**:
 ---
 
 ## 🧑‍💻 Author: Jonas Tibbelin
-- Created for a school assignment project with Spring Boot & Thymeleaf.
 ## **My Thoughts**
 - This was quite difficult for me at this time, I did have to make use of most (if not all) that I've learned so far.
 - I did quite quickly set up the member class and the 3 pages, Displaying the different members with thymeleaf and communicating the user Id's between frontend and backend
